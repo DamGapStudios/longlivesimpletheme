@@ -1,1 +1,28 @@
-node_modules/
+~*
+*.sql
+node_modules
+
+# VCCW
+.ansible
+.vagrant
+ansible.cfg
+Movefile
+provision
+Vagrantfile
+wp-cli.yml
+
+# WordPress
+wordpress/.*
+wordpress/*.php
+wordpress/*.html
+wordpress/*.txt
+wordpress/wp-admin
+wordpress/wp-includes
+wordpress/wp-content/*.php
+wordpress/wp-content/ewww
+wordpress/wp-content/languages
+wordpress/wp-content/mu-plugins
+wordpress/wp-content/upgrade
+wordpress/wp-content/uploads
+wordpress/wp-content/plugins
+wordpress/wp-content/themes

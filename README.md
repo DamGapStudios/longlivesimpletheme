@@ -1,32 +1,99 @@
-# Wordpress REST API + React JS
+# wp-react-spa-boilerplate
 
-This boilerplate will help you use React JS with Wordpress REST API.
-Clone the project and install node packages:
+> Theme boilerplate for WordPress using WP REST API and React.js
+
+## Contains
+
+- [x] Babel
+- [x] Browsersync
+- [ ] CSS-Modules or CSS in JS
+- [x] node-wpapi
+- [x] React
+- [x] React Hot Module Reload
+- [x] React Routor
+- [x] React Routor Redux
+- [x] Redux
+- [x] Redux DevTool
+- [x] Standard
+- [x] WordPress
+- [x] webpack
+- [x] VCCW
+- [x] yarn
+
+## Initial setup
+
+development environment uses [VCCW v3](http://vccw.cc/).  
+
+**1.**
 
 ```
-npm i
+$ git clone git@github.com:blivesta/wp-react-spa-boilerplate.git
 ```
 
-To run the project on localhost:8080:
+**2.**
+
 ```
-webpack-dev-server
+$ cd wp-react-spa-boilerplate
 ```
 
-You need to have webpack and webpack-dev-server installed globally:
-* [`webpack`](http://webpack.github.io/docs/)
+**3.**
+
 ```
-npm install -g webpack
+$ yarn setup
 ```
 
-* [`webpack-dev-server`](http://webpack.github.io/docs/webpack-dev-server.html)
+This command also installs [VCCW](http://vccw.cc/).
+
+
+### Result
+
+`src` -> `wordpress/wp-content/themes/wp-react-spa-boilerplate`
+
 ```
-npm install -g webpack-dev-server
+|-- .vagrant/
+|-- node_modules/
+|-- provision/ (vccw)
+|-- src/ (theme source files)
+    |-- client/
+    |-- functions.php
+    |-- index.php
+    |-- ...
+|-- wordpess/
+    |-- wp-content/
+        |-- themes/
+            |-- wp-react-spa-boilerplate/
+                |-- bundle.js
+                |-- functions.php
+                |-- index.php
+                |-- ...
+|-- .editorconfig
+|-- .gitignore
+|-- ansible.cfg (vccw)
+|-- config.js
+|-- Movefile (vccw)
+|-- package.json
+|-- provision-post.sh (vccw)
+|-- README.md
+|-- run.js
+|-- site.yml (vccw)
+|-- Vagrantfile (vccw)
+|-- webpack.config.js
+|-- wp-cli.yml (vccw)
+|-- yarn.lock
 ```
 
-Don't forget to update the Worpress installation url in DataActions.js. It's located in src/actions/DataActions.js line 7
+## Usage
+
 ```
-class DataActions {
-	constructor() {
-		const appUrl = 'http://andreypokrovskiy.com/projects/wp-api'; // Wordpress installation url
-	}
+$ yarn start
 ```
+
+Production (compress)
+
+```
+$ yarn build
+```
+
+## License
+
+Released under the MIT license.
